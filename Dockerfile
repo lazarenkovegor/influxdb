@@ -35,7 +35,7 @@ FROM dbuild AS dbuild-all
 
 COPY . /code
 WORKDIR /code
-RUN make
+RUN go get
 
 ##
 # InfluxDB Image (Monolith)

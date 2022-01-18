@@ -10,7 +10,7 @@ require (
 	github.com/andreyvit/diff v0.0.0-20170406064948-c7f18ee00883
 	github.com/apache/arrow/go/arrow v0.0.0-20210722123801-4591d76fce28
 	github.com/benbjohnson/clock v0.0.0-20161215174838-7dc76406b6d3
-	github.com/benbjohnson/tmpl v1.0.0
+	github.com/benbjohnson/tmpl v1.1.0
 	github.com/boltdb/bolt v1.3.1 // indirect
 	github.com/buger/jsonparser v0.0.0-20191004114745-ee4c978eae7e
 	github.com/cespare/xxhash v1.1.0
@@ -35,7 +35,7 @@ require (
 	github.com/hashicorp/go-retryablehttp v0.6.4 // indirect
 	github.com/hashicorp/raft v1.0.0 // indirect
 	github.com/hashicorp/vault/api v1.0.2
-	github.com/imdario/mergo v0.3.9 // indirect
+	github.com/imdario/mergo v0.3.12 // indirect
 	github.com/influxdata/cron v0.0.0-20201006132531-4bb0a200dcbe
 	github.com/influxdata/flux v0.148.0
 	github.com/influxdata/httprouter v1.3.1-0.20191122104820-ee83e2772f69
@@ -85,7 +85,7 @@ require (
 	go.etcd.io/bbolt v1.3.6
 	go.uber.org/multierr v1.5.0
 	go.uber.org/zap v1.14.1
-	golang.org/x/crypto v0.0.0-20201221181555-eec23a3978ad
+	golang.org/x/crypto v0.0.0-20210322153248-0c34fe9e7dc2
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
 	golang.org/x/sys v0.0.0-20210831042530-f4d43177bf5e
 	golang.org/x/text v0.3.6
@@ -117,8 +117,9 @@ require (
 	github.com/Azure/go-autorest/logger v0.2.0 // indirect
 	github.com/Azure/go-autorest/tracing v0.6.0 // indirect
 	github.com/DATA-DOG/go-sqlmock v1.4.1 // indirect
-	github.com/Masterminds/semver v1.4.2 // indirect
-	github.com/Masterminds/sprig v2.16.0+incompatible // indirect
+	github.com/Masterminds/goutils v1.1.1 // indirect
+	github.com/Masterminds/semver v1.5.0 // indirect
+	github.com/Masterminds/sprig v2.22.0+incompatible // indirect
 	github.com/Microsoft/go-winio v0.4.11 // indirect
 	github.com/SAP/go-hdb v0.14.1 // indirect
 	github.com/aokoli/goutils v1.0.1 // indirect
@@ -155,7 +156,7 @@ require (
 	github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/flatbuffers v2.0.0+incompatible // indirect
-	github.com/google/uuid v1.1.2 // indirect
+	github.com/google/uuid v1.2.0 // indirect
 	github.com/googleapis/gax-go/v2 v2.0.5 // indirect
 	github.com/hashicorp/errwrap v1.0.0 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.1 // indirect
@@ -166,7 +167,7 @@ require (
 	github.com/hashicorp/golang-lru v0.5.1 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/hashicorp/vault/sdk v0.1.8 // indirect
-	github.com/huandu/xstrings v1.0.0 // indirect
+	github.com/huandu/xstrings v1.3.2 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/influxdata/influxdb-client-go/v2 v2.3.1-0.20210518120617-5d1fff431040 // indirect
 	github.com/influxdata/tdigest v0.0.2-0.20210216194612-fc98d27c9e8b // indirect
@@ -183,8 +184,10 @@ require (
 	github.com/mattn/go-runewidth v0.0.9 // indirect
 	github.com/mattn/go-tty v0.0.0-20180907095812-13ff1204f104 // indirect
 	github.com/mgutz/ansi v0.0.0-20170206155736-9520e82c474b // indirect
+	github.com/mitchellh/copystructure v1.1.1 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/mitchellh/mapstructure v1.1.2 // indirect
+	github.com/mitchellh/reflectwalk v1.0.1 // indirect
 	github.com/opencontainers/go-digest v1.0.0-rc1 // indirect
 	github.com/pelletier/go-toml v1.2.0 // indirect
 	github.com/pierrec/lz4 v2.0.5+incompatible // indirect
@@ -223,3 +226,5 @@ require (
 )
 
 replace github.com/nats-io/nats-streaming-server v0.11.2 => github.com/influxdata/nats-streaming-server v0.11.3-0.20201112040610-c277f7560803
+
+replace github.com/influxdata/flux v0.148.0 => github.com/lazarenkovegor/flux v0.149.100

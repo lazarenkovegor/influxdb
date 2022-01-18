@@ -1,5 +1,13 @@
-FROM debian:buster-slim AS dependency-base
+FROM  golang:1.17 as builder
+RUN apt-get update && apt-get install -y pkg-config protobuf-compiler libprotobuf-dev
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs  | bash -s -- -y
+ENV PATH=$PATH:/root/.cargo/bin
+WORKDIR /code
+COPY . .
+RUN make
 
+
+FROM debian:buster-slim
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
@@ -10,14 +18,9 @@ RUN apt-get update \
 	&& apt-get autoremove --yes \
 	&& rm -rf /var/lib/{apt,dpkg,cache,log}
 
-# NOTE: We separate these two stages so we can run the above
-# quickly in CI, in case of flaky failure.
-FROM dependency-base
-
-EXPOSE 8086
-
-COPY influxd /usr/bin/
+COPY --from=builder /code/bin/linux/influxd /usr/bin/influxd
 COPY docker/influxd/entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["influxd"]
+EXPOSE 8086
